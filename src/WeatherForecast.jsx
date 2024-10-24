@@ -1,13 +1,14 @@
 import './WeatherForecast.css'
 
 
-const WeatherForecast = () => {
-    <div className="weather">
-    <h2>Day of the Week</h2>
-    <img src="" alt="" />
-    <p><span>conditions: </span>current weather conditions</p>
-    <p><span>time: </span>time of day</p>
-</div> 
+const WeatherForecast = (props) => {
+
+    return <div className="weather">
+                <h2>{props.day}</h2>
+                <img src={props.img} alt={props.imgAlt} />
+                <p>Conditions: { (props.conditions).toUpperCase()} </p>
+                <p><span>Time: {props.time} </span></p>
+            </div> 
 }
 
 export default WeatherForecast
